@@ -11,44 +11,45 @@
     <header>
         <h1> SHI-FU-MI </h1>
     </header>
-    
+        <!-- BOUTON DE CHOIX -->
         <section class="lesBoutons">
     <ul class="listeBouton">
         <li class="bouton" id="boutonPierre">
                 <input type="image" id="pierre" 
-                src="Image\imagePierre.png " onClick="pierre"/>
+                src="Image\imagePierre.png "/>
                 
         </li>
         <li class="bouton" id="boutonFeuille">
                 <input type="image" id="feuille" 
-                src="Image\imageFeuille.png " onClick="feuille"/>
+                src="Image\imageFeuille.png "/>
         </li>
         <li class="bouton" id="boutonCiseau">
                 <input type="image" id="ciseaux" 
-                src="Image\imageCiseau.png " onClick="ciseaux"/>
+                src="Image\imageCiseau.png "/>
         </li>
     </ul>
           <h2 class="faitChoix"> Faites Votre Choix ! </h2>
         </section>
-        
+        <!-- AFFICHER LES IMAGES CHOISIS -->
         <section class="afficheImage">
             <div class="titre">
-            <h2 class="titreJoueur"> JOUEUR </h2>
-            <h2 class="titreIa"> L'IA </h2>
+              <h2 class="titreJoueur"> JOUEUR </h2>
+                <h2 class="titreIa"> L'IA </h2>
             </div>
-            <div class="iconeChoix">
-            <div id="joueur"> <!-- Affiché l'image du joueur-->
-            </div>
-            <div>
-                <img>
-            </div>
-            <div class="iA"> <!-- Affiché l'image de l'IA-->
+                  <div class="iconeChoix">
+        <!-- Affiché l'image du joueur-->
+                    <div id="joueur"> 
+                  </div>
+              <div>
+                <img class="imageVersus" src="Image\imageVs.png"/>
+              </div>
+        <!-- Affiché l'image de l'IA-->
+            <div class="iA"> 
             </div>
         </section>
         <h2> Résultat </h2>
                 <div class="résultat">
                 </div>
-            </div>
         <input id=boutonRejouer type="button" value="Nouvelle Parie">
 
         
