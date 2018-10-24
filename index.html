@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="Style\Style.css">
+    <title>Document</title>
+</head>
+<body> 
+    <header>
+        <h1> SHI-FU-MI </h1>
+    </header>
+    
+        <section class="lesBoutons">
+    <ul class="listeBouton">
+        <li class="bouton" id="boutonPierre">
+                <input type="image" id="pierre" 
+                src="Image\imagePierre.png " onClick="pierre"/>
+                
+        </li>
+        <li class="bouton" id="boutonFeuille">
+                <input type="image" id="feuille" 
+                src="Image\imageFeuille.png " onClick="feuille"/>
+        </li>
+        <li class="bouton" id="boutonCiseau">
+                <input type="image" id="ciseaux" 
+                src="Image\imageCiseau.png " onClick="ciseaux"/>
+        </li>
+    </ul>
+          <h2 class="faitChoix"> Faites Votre Choix ! </h2>
+        </section>
+        
+        <section class="afficheImage">
+            <div class="titre">
+            <h2 class="titreJoueur"> JOUEUR </h2>
+            <h2 class="titreIa"> L'IA </h2>
+            </div>
+            <div class="iconeChoix">
+            <div id="joueur"> <!-- Affiché l'image du joueur-->
+            </div>
+            <div>
+                <img>
+            </div>
+            <div class="iA"> <!-- Affiché l'image de l'IA-->
+            </div>
+        </section>
+        <h2> Résultat </h2>
+                <div class="résultat">
+                </div>
+            </div>
+        <input id=boutonRejouer type="button" value="Nouvelle Parie">
+
+        
+    
+    
+
+
+
+
+    <script src="Script\Script.js"></script>
+</body>
+</html>
