@@ -71,14 +71,14 @@ console.log(choixDuIa);
 function comparer() {
     if (choixJoueur === choixIA) {
         console.log("Egalité");
-            afficheResultat.innerHTML = "Vous avez faits Egalité ";      
+            afficheResultat.innerHTML = "<br><br>Vous avez faits Egalité ";      
     }
     else if ((choixJoueur==0) && (choixIA==2) || (choixJoueur==1) && (choixIA==0) || (choixJoueur==2) && (choixIA==1)){
         console.log("Vous avez gagnez");
-            afficheResultat.innerHTML = " Vous avez gagnez";
+            afficheResultat.innerHTML = "<br><br>Vous avez gagnez";
     } else {
         console.log("Vous avez perdus");
-            afficheResultat.innerHTML = "Vous avez perdus";   
+            afficheResultat.innerHTML = "<br><br>Vous avez perdus";   
     }
 };
         // Donner le résultat //
