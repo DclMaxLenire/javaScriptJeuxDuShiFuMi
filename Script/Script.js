@@ -15,66 +15,75 @@ var choixJoueur;
 
 var resultat;
 
+var nouvellePartie = document.getElementById("boutonReJouer");
+
 // Faire choisir l'utilisateur et affiché sont choix //
 
 boutonPierre.addEventListener("click",
 function choixPierre() {  
 choixDuJoueur = "pierre";
-choixJoueur =0;
-    joueur.innerHTML = "Vous avez choisis <br><br> LA PIERRE" 
-        console.log(choixDuJoueur + choixJoueur);
-        comparer();
-       
+    choixJoueur =0;
+    document.getElementById("joueur").style.backgroundImage="url('Image/imagePierre.png')";
+            console.log(choixDuJoueur + choixJoueur);
+            choixDeIa();
+                comparer();
 });
 boutonFeuille.addEventListener("click",
 function choixFeuille() {      
 choixDuJoueur = "feuille";
-choixJoueur =1;
-    joueur.innerHTML = "Vous avez choisis <br><br> LA FEUILLE"
-        console.log(choixDuJoueur + choixJoueur);
-        comparer();
-        
+    choixJoueur =1;
+        document.getElementById("joueur").style.backgroundImage="url('Image/imageFeuille.png')";
+            console.log(choixDuJoueur + choixJoueur);
+            choixDeIa();
+                comparer();   
 });
 boutonCiseaux.addEventListener("click",
 function choixCiseaux() {       
 choixDuJoueur ="ciseaux";
-choixJoueur =2;
-    joueur.innerHTML = "Vous avez choisis <br><br> LA PAIRE DE CISEAUX"
-        console.log(choixDuJoueur + choixJoueur);  
-        comparer(); 
+    choixJoueur =2;
+    document.getElementById("joueur").style.backgroundImage="url('Image/imageCiseau.png')";
+            console.log(choixDuJoueur + choixJoueur);  
+            choixDeIa();
+                comparer(); 
 });
         // Faire choisir l'IA //
 function choixDeIa() {
     choixIA = Math.floor(Math.random() * 3);
+    choixIaResultat();
 }
         // Faire choisir l'IA et montrer le choix //
-choixDeIa();
 function choixIaResultat() {
 if (choixIA == 0 ) {
-    choixDuIa = "pierre";
+    choixDuIa = "PIERRE";
+    document.getElementById("afficheIa").style.backgroundImage="url('Image/imagePierre.png')";
 }
 else if(choixIA  === 1) {
-    choixDuIa= "feuille";
+    choixDuIa= "FEUILLE";
+    document.getElementById("afficheIa").style.backgroundImage="url('Image/imageFeuille.png')";
 }
 else if(choixIA === 2) {
-    choixDuIa = "ciseaux";
+    choixDuIa = "CISEAUX";
+    document.getElementById("afficheIa").style.backgroundImage="url('Image/imageCiseau.png')";
 }
 };
-choixIaResultat();
 console.log(choixDuIa);
 // Comparer les choix //
 function comparer() {
     if (choixJoueur === choixIA) {
         console.log("Egalité");
-        
+            afficheResultat.innerHTML = "Vous avez faits Egalité ";      
     }
     else if ((choixJoueur==0) && (choixIA==2) || (choixJoueur==1) && (choixIA==0) || (choixJoueur==2) && (choixIA==1)){
         console.log("Vous avez gagnez");
+            afficheResultat.innerHTML = " Vous avez gagnez";
     } else {
-        console.log("Vous avez perdu");
-
+        console.log("Vous avez perdus");
+            afficheResultat.innerHTML = "Vous avez perdus";   
     }
 };
-
         // Donner le résultat //
         // Relancer le jeu //
+nouvellePartie.addEventListener("click",
+function(){
+    window.location.reload(false);  
+});
